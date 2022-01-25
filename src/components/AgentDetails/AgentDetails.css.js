@@ -23,7 +23,8 @@ export const Role = styled.h1`
 
 export const Biography = styled.p`
     margin-top: 0.5rem;
-    font-family: 'Arial';
+    font-size: 1.1rem;
+    font-family: 'Nunito';
     line-height: 1.5;
 
 `
