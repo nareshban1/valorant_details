@@ -11,7 +11,7 @@ export const NavbarContainer = styled.header`
     box-sizing: border-box;
     /* position: fixed; */
     color:#FE4456;
-    z-index: 10;
+    z-index: 50;
     background-color: #0E1921;
     height:110px;
 `
@@ -38,16 +38,18 @@ export const NavLinks = styled.ul`
 margin-top: 1rem;
 display:flex;
 align-items:center;
-font-size:1rem;
-font-family:"Matroska";
-cursor: pointer;
+
+
 
 `
 export const Links = styled.li`
     width:150px;
     text-align: center;
+    font-size:1rem;
+    font-family:"Matroska";
     transition: 0.3s ease;
-  
+    z-index: 100;
+    cursor: pointer;
 
     &:first-child{
         margin-left: 0;
