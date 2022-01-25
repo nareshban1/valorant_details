@@ -114,7 +114,7 @@ const AgentList = () => {
                   agentRole={selected.role.displayName}
                   roleIcon={selected.role.displayIcon}
                 />
-                <audio hidden autoPlay key={selected.uuid}>
+                <audio hidden autoPlay key={selected.uuid} preload>
                   <source
                     src={selected?.voiceLine.mediaList[0].wave}
                     type="audio/wav"
