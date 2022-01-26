@@ -18,6 +18,7 @@ export const AgentHeaderContainer = styled.div`
         background-image: url(${backgroundImage});
         height: 80vh;
         background-size: cover;
+        background-position: 50% 0;
         background-repeat: no-repeat;
         padding: 1rem;
         padding-bottom: 0;
