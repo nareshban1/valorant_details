@@ -40,12 +40,8 @@ export const AgentListContent = styled.div`
    
 `
 
-export const DesktopCss = styled.div`
-       height :100% ;
-       width: 100%;
-       position: relative;
-   
-`
+
+
 
 export const MobileAgentListContent = styled.div`
         height: 100%;

@@ -8,7 +8,6 @@ import {
   AgentHeaderContainer,
   AgentHeroSection,
   ImageDetailsContainer,
-  DesktopCss,
   MobileAgentListContent,
 } from "./AgentList.css";
 import { useApi } from "../../api/useApi";
