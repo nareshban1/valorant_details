@@ -1,16 +1,43 @@
 import styled from "styled-components";
 
-
-export const AgentImageContainer = styled.div`
+export const AgentImagePage = styled.div`
     position: absolute;
-    height:70vh;
+    height:100%;
+    width:100%;
     display: grid;
     place-items: center;
-    margin-top: -100px;
     z-index: 0;
-    margin-left: 100px;
+
+    @media(max-width:980px){
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: block;
+       
+        
+        
+    }
+    @media(max-width:800px){
+        display: none;
+    }
+
+   
+    
 `
+export const AgentImageContainer = styled.div`
+    width: 60%;
+    @media(max-width:980px){
+        width: 150%;
+        margin-left: -150px;
+    }
+
+   
+
+    
+`
+
+
 export const Image = styled.img`
     height:100%;
-    width:75%;
+    width:100%;
 `

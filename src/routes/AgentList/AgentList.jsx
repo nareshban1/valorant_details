@@ -7,6 +7,9 @@ import {
   AgentListContent,
   AgentHeaderContainer,
   AgentHeroSection,
+  ImageDetailsContainer,
+  DesktopCss,
+  MobileAgentListContent,
 } from "./AgentList.css";
 import { useApi } from "../../api/useApi";
 import AgentAbilities from "../../components/AgentAbilities/AgentAbilities";
@@ -100,21 +103,40 @@ const AgentList = () => {
     <AgentListContainer>
       <AgentHeroSection>
         <AgentHeaderContainer>
-          <AgentListContent>
+          <>
             {agents.loading ? null : (
               <>
-                <AgentsNameList
-                  agentNames={agents?.data?.data}
-                  setSelected={setSelected}
-                  selected={selected}
-                />
-                <AgentImage agentImage={selected.fullPortrait} />
-                <AgentDetails
-                  agentDescription={selected.description}
-                  agentRole={selected.role.displayName}
-                  roleIcon={selected.role.displayIcon}
-                />
-                <audio hidden autoPlay key={selected.uuid} preload>
+                <AgentListContent>
+                  <AgentsNameList
+                    agentNames={agents?.data?.data}
+                    setSelected={setSelected}
+                    selected={selected}
+                  />
+                  <AgentImage agentImage={selected.fullPortrait} />
+                  <AgentDetails
+                    agentDescription={selected.description}
+                    agentRole={selected.role.displayName}
+                    roleIcon={selected.role.displayIcon}
+                  />
+                </AgentListContent>
+
+                <MobileAgentListContent>
+                  <ImageDetailsContainer>
+                    <AgentDetails
+                      agentDescription={selected.description}
+                      agentRole={selected.role.displayName}
+                      roleIcon={selected.role.displayIcon}
+                    />
+                    <AgentsNameList
+                      agentNames={agents?.data?.data}
+                      setSelected={setSelected}
+                      selected={selected}
+                    />
+                  </ImageDetailsContainer>
+                  <AgentImage agentImage={selected.fullPortrait} />
+                </MobileAgentListContent>
+
+                <audio hidden autoPlay key={selected.uuid}>
                   <source
                     src={selected?.voiceLine.mediaList[0].wave}
                     type="audio/wav"
@@ -122,7 +144,7 @@ const AgentList = () => {
                 </audio>
               </>
             )}
-          </AgentListContent>
+          </>
         </AgentHeaderContainer>
       </AgentHeroSection>
       <AgentAbilities

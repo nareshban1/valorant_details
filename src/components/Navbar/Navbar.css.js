@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
 
 export const NavbarContainer = styled.header`
     width: 100%;
@@ -13,24 +15,26 @@ export const NavbarContainer = styled.header`
     color:#FE4456;
     z-index: 50;
     background-color: #0E1921;
-    height:110px;
+    height:100px;
 `
 
 export const Logo = styled.h1`
 font-family:'Valorant';
-font-size: 2.5rem;
-color:transparent;
--webkit-text-stroke: 0.1px #FE4456;
+color:#FE4456;
 letter-spacing: 2px;
 cursor: pointer;
 transition: 300ms ease;
 &:hover{
-    -webkit-text-stroke:none;
-    color:#FE4456;
+    -webkit-text-stroke:#FE4456 0.1px;
+    color:transparent;
 }
 
 `
 export const NavLinksContainer = styled.nav`
+    width: 100%;
+    display: grid;
+    place-items: center;
+
     
 
 `
@@ -58,4 +62,12 @@ export const Links = styled.li`
     &:hover{
         letter-spacing: 0.2rem;
     }
+    @media(max-width:500px){
+        font-size: 0.7rem;
+        width: 80px;
+    }
+`
+
+export const RouteLink = styled(Link)`
+    color:#FE4456;
 `

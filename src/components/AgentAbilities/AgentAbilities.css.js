@@ -7,20 +7,30 @@ export const AgentAbilitiesContainer = styled.div`
     color:#0E1921;
     display: flex;
     align-items: center;
-    height: 800px;
-    margin-top: 5rem;
+    height: auto;
+    padding: 1rem;
+    @media(max-width:898px){
+        flex-direction: column-reverse;
+    
+    }
+   
+
     
 
 `
 
 export const AbilitiesContainer = styled.div`
-   
-  
+     width: 50%;
+     @media(max-width:898px){
+        width: 100%;
+    
+    }
 `
 
 export const AbilitiesIconsContainer = styled.div`
     display: flex;
     margin-top: 1rem;
+  
     
 `
 
@@ -32,8 +42,8 @@ export const AbilitiesHeading = styled.h1`
 `
 
 export const AbilitiesImage = styled.img`
-    height: 100px;
-    width: 100px;
+    max-height: 100px;
+    max-width: 100px;
     background-color:${(props) => props.selected ? "#FE4456" : "#A6A39E"}  ;
     margin:10px;
     padding: 5px;
@@ -44,9 +54,14 @@ export const AbilitiesImage = styled.img`
         margin-left: 0;
     }
 
+    @media(max-width:500px){
+        min-height: 40px;
+        min-width: 40px;
+    }
+
 `
 
-export const AbilityDetails = styled.p`
+export const AbilityDetails = styled.div`
     margin-top: 1.5rem;
 `
 export const AbilityName = styled.h2`
@@ -62,6 +77,14 @@ font-family: 'Nunito';
 line-height: 1.5;
 `
 
+
+export const BustImageContainer = styled.div`
+     width: 50%;
+    @media(max-width:898px){
+        width: 100%;
+    }
+
+`
 export const BustImage = styled.img`
-    
+    width: 100%;
 `

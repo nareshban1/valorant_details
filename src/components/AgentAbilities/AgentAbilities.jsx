@@ -9,6 +9,7 @@ import {
   AbilityName,
   AgentAbilitiesContainer,
   BustImage,
+  BustImageContainer,
 } from "./AgentAbilities.css";
 
 const AgentAbilities = ({ abilities, bustImage }) => {
@@ -26,11 +27,12 @@ const AgentAbilities = ({ abilities, bustImage }) => {
       <AbilitiesContainer>
         <AbilitiesHeading>Special Abilities</AbilitiesHeading>
         <AbilitiesIconsContainer>
-          {abilities.map((ability) => (
+          {abilities.map((ability, index) => (
             <AbilitiesImage
               src={ability.displayIcon}
               onClick={() => handleSelect(ability)}
               selected={selected.displayName === ability.displayName}
+              key={index}
             />
           ))}
         </AbilitiesIconsContainer>
@@ -39,7 +41,9 @@ const AgentAbilities = ({ abilities, bustImage }) => {
           <AbilityDescription>{selected.description}</AbilityDescription>
         </AbilityDetails>
       </AbilitiesContainer>
-      <BustImage src={bustImage} />
+      <BustImageContainer>
+        <BustImage src={bustImage} />
+      </BustImageContainer>
     </AgentAbilitiesContainer>
   );
 };
