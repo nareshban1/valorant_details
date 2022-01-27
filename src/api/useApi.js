@@ -1,10 +1,8 @@
 import { useEffect, useRef, useReducer } from 'react';
 
-export const useApi = (URI) => {
+export const useApi = (apiURL) => {
     const cache = useRef({});
-    const baseURL = "https://valorant-api.com/v1/";
 
-    const apiURL = baseURL + URI;
     const initialState = {
         status: 'idle',
         loading: true,

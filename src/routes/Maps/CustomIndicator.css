@@ -1,0 +1,11 @@
+.carousel .control-dots .dot {
+  border-radius: 0% !important;
+  width: 25px !important;
+  height: 5px !important;
+  background-color: #fe4456;
+}
+
+.carousel .control-dots {
+  text-align: left;
+  margin-left: 20px;
+}

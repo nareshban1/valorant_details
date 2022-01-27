@@ -96,7 +96,9 @@ const defaultSelected = {
 
 const AgentList = () => {
   const [selected, setSelected] = useState(defaultSelected);
-  const agents = useApi("agents?isPlayableCharacter=true");
+  const agents = useApi(
+    "https://valorant-api.com/v1/agents?isPlayableCharacter=true"
+  );
 
   return (
     <AgentListContainer>
