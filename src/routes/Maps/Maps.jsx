@@ -1,5 +1,4 @@
 import React from "react";
-import { useApi } from "../../api/useApi";
 import { map_list } from "../../utilities/mapsData";
 import {
   MapsContainer,
