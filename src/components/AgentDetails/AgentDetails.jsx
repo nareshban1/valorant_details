@@ -8,16 +8,43 @@ import {
   RoleIconContainer,
 } from "./AgentDetails.css";
 
-const AgentDetails = ({ agentDescription, agentRole, roleIcon }) => {
+const AgentDetails = ({ agentDescription, agentRole, roleIcon, uuid }) => {
+  const variants = {
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeOut",
+        duration: 0.5,
+      },
+    },
+    hide: {
+      y: 50,
+      opacity: 0,
+    },
+  };
+
   return (
     <AgentDetailsContainer>
       <Headers>Role</Headers>
-      <RoleIconContainer>
+      <RoleIconContainer
+        key={uuid}
+        variants={variants}
+        animate={"show"}
+        initial="hide"
+      >
         <Role>{agentRole}</Role>
         <IconContainer src={roleIcon} />
       </RoleIconContainer>
       <Headers>Biography</Headers>
-      <Biography>{agentDescription}</Biography>
+      <Biography
+        key={agentDescription}
+        variants={variants}
+        animate={"show"}
+        initial="hide"
+      >
+        {agentDescription}
+      </Biography>
     </AgentDetailsContainer>
   );
 };

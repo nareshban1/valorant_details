@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md"
+
+
 export const MapsContainer = styled.section`
     
 `
@@ -34,7 +38,7 @@ export const CarouselImage = styled.img`
     }
 `
 
-export const MapInfo = styled.div`
+export const MapInfo = styled(motion.div)`
    width: 100%;
    display: flex;
    flex-direction: column;
@@ -92,6 +96,7 @@ export const MapsGalleryHeader = styled.h1`
     color:#0E1921;
     text-transform: uppercase;
     z-index: 10;
+    letter-spacing: 2px;
 `
 
 export const GalleryImage = styled.img`
@@ -99,5 +104,25 @@ export const GalleryImage = styled.img`
     object-fit: contain;
 `
 
+export const CustomPrevArrow = styled(MdArrowBackIos)`
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    bottom:0;
+    font-size: 3rem;
+    z-index:5;
+    color:#0E1921;
+    margin-left: 10px;
+`
+
+export const CustomNextArrow = styled(MdArrowForwardIos)`
+    cursor: pointer;
+    position: absolute;
+    left:0;
+    bottom:0;
+    margin-left: 50px;
+    font-size: 3rem;
+    color:#0E1921;
+`
 
 

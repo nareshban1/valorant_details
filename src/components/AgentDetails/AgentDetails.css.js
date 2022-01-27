@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 export const AgentDetailsContainer = styled.div`
     color:white;
     width:300px;
@@ -11,7 +11,7 @@ export const AgentDetailsContainer = styled.div`
     }
 
 `
-export const RoleIconContainer = styled.div`
+export const RoleIconContainer = styled(motion.div)`
     display: flex;
     align-items: center;
     @media(max-width:980px){
@@ -26,13 +26,14 @@ export const IconContainer = styled.img`
 
 export const Role = styled.h1`
     font-size: 4rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
     @media(max-width:980px){
         font-size: 3rem; 
     }
 `
 
-export const Biography = styled.p`
+export const Biography = styled(motion.p)`
     margin-top: 0.5rem;
     font-size: 1rem;
     font-family: 'Nunito';

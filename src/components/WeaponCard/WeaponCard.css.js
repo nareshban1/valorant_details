@@ -26,6 +26,7 @@ cursor: pointer;
 `
 export const WeaponName = styled.h1`
 font-family: 'TungstenBold';
+letter-spacing: 2px;
 font-size: 5rem;
 color: ${({ color }) => color} ;
 text-transform: uppercase;

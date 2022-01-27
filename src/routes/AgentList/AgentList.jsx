@@ -36,13 +36,14 @@ const AgentList = () => {
 
                   <AgentImage
                     agentImage={selected.fullPortrait}
-                    key={selected.uuid}
+                    uuid={selected.uuid}
                   />
 
                   <AgentDetails
                     agentDescription={selected.description}
                     agentRole={selected.role.displayName}
                     roleIcon={selected.role.displayIcon}
+                    uuid={selected.uuid}
                   />
                 </AgentListContent>
 
@@ -52,6 +53,7 @@ const AgentList = () => {
                       agentDescription={selected.description}
                       agentRole={selected.role.displayName}
                       roleIcon={selected.role.displayIcon}
+                      uuid={selected.uuid}
                     />
                     <AgentsNameList
                       agentNames={agents?.data?.data}

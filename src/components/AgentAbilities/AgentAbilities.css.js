@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 
 export const AgentAbilitiesContainer = styled.div`
     width: min(1320px, 100%);
@@ -38,6 +38,7 @@ export const AbilitiesHeading = styled.h1`
     font-family: 'TungstenBold';
     text-transform: uppercase;
     font-size: 4rem;
+    letter-spacing: 2px;
     color:#0E1921;
 `
 
@@ -61,7 +62,7 @@ export const AbilitiesImage = styled.img`
 
 `
 
-export const AbilityDetails = styled.div`
+export const AbilityDetails = styled(motion.div)`
     margin-top: 1.5rem;
 `
 export const AbilityName = styled.h2`

@@ -22,6 +22,21 @@ const AgentAbilities = ({ abilities, bustImage }) => {
     setSelected(abilities?.[0]);
   }, [abilities]);
 
+  const variants = {
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeOut",
+        duration: 0.5,
+      },
+    },
+    hide: {
+      y: 50,
+      opacity: 0,
+    },
+  };
+
   return (
     <AgentAbilitiesContainer>
       <AbilitiesContainer>
@@ -36,7 +51,12 @@ const AgentAbilities = ({ abilities, bustImage }) => {
             />
           ))}
         </AbilitiesIconsContainer>
-        <AbilityDetails>
+        <AbilityDetails
+          key={selected.displayName}
+          variants={variants}
+          animate={"show"}
+          initial="hide"
+        >
           <AbilityName>{selected.displayName}</AbilityName>
           <AbilityDescription>{selected.description}</AbilityDescription>
         </AbilityDetails>

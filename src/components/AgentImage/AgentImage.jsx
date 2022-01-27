@@ -1,7 +1,7 @@
 import React from "react";
 import { AgentImageContainer, AgentImagePage, Image } from "./AgentImage.css";
 
-const AgentImage = ({ agentImage, key }) => {
+const AgentImage = ({ agentImage, uuid }) => {
   const variants = {
     show: {
       opacity: 1,
@@ -19,7 +19,7 @@ const AgentImage = ({ agentImage, key }) => {
   return (
     <AgentImagePage>
       <AgentImageContainer
-        key={key}
+        key={uuid}
         variants={variants}
         animate={"show"}
         initial="hide"
