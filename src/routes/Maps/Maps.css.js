@@ -22,6 +22,7 @@ export const MapsHeader = styled.h1`
     text-transform: uppercase;
     position: absolute;
     z-index: 10;
+    letter-spacing: 2px;
 `
 
 export const CarouselContainer = styled.div`
