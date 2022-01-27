@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 export const AgentImagePage = styled.div`
     position: absolute;
     height:100%;
@@ -24,7 +24,7 @@ export const AgentImagePage = styled.div`
    
     
 `
-export const AgentImageContainer = styled.div`
+export const AgentImageContainer = styled(motion.div)`
     width: 60%;
     @media(max-width:980px){
         width: 150%;
