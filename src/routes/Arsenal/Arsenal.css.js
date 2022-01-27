@@ -17,6 +17,7 @@ export const HeaderFlex = styled.div`
 `
 export const ArsenalContentHeader = styled.h1`
     font-family: 'TungstenBold';
+    letter-spacing: 2px;
     font-size: 8rem;
     color:#0E1921;
     text-transform: uppercase;
