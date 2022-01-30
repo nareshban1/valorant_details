@@ -44,10 +44,17 @@ const AgentAbilities = ({ abilities, bustImage }) => {
         <AbilitiesIconsContainer>
           {abilities.map((ability, index) => (
             <AbilitiesImage
-              src={ability.displayIcon}
+              src={
+                ability.displayIcon ||
+                process.env.PUBLIC_URL + `/valoranticon.png`
+              }
               onClick={() => handleSelect(ability)}
               selected={selected.displayName === ability.displayName}
               key={index}
+              onError={(event) => {
+                event.target.src = process.env.PUBLIC_URL + `/valoranticon.png`;
+                event.onerror = null;
+              }}
             />
           ))}
         </AbilitiesIconsContainer>
